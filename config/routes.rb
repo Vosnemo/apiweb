@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   #get "/actors", to: "actors#index"
   #get "/actors/:id", to: "actors#show"
   
-  root "actors#index"
+  #root "actors#index"
+  #root "directors#index"
   resources :actors
+  resources :directors
 
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_30_042741) do
+ActiveRecord::Schema.define(version: 2021_08_30_234752) do
 
   create_table "actors", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 2021_08_30_042741) do
     t.text "bio"
     t.text "country"
     t.string "age"
+  end
+
+  create_table "directors", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "bio", default: "Biografia", null: false
+    t.text "country", null: false
+    t.string "age"
+    t.boolean "is_writer", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
