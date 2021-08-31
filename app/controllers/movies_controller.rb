@@ -34,11 +34,11 @@ class MoviesController < ApplicationController
         end
     end
 
+    #DELETE /movies/:id
     def destroy
         @movie = Movie.find(params[:id])
         @movie.destroy
         head 204
-        
     end
 
     protected 
