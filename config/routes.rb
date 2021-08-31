@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   #root "directors#index"
   resources :actors
   resources :directors
+  resources :movies
 
 end
